@@ -8,13 +8,13 @@ class Fsm < Formula
   version "1.4.10"
   license "Apache 2.0"
 
-  depends_on "git"
+  depends_on "git" => :optional
   depends_on "go" => :optional
 
   on_macos do
     on_intel do
       url "https://github.com/flomesh-io/fsm/releases/download/v1.4.10/fsm_v1.4.10_darwin_x86_64.tar.gz"
-      sha256 "707e006ccefa142d6e3e26628bda6cebb794b0a2c6d9e48a45843967a246d14a"
+      sha256 "1e9cc7dcd03c21c43231099e1de3a6ae49d1c25c3552353c66d4b8a012445777"
 
       def install
         bin.install "fsm"
@@ -22,7 +22,7 @@ class Fsm < Formula
     end
     on_arm do
       url "https://github.com/flomesh-io/fsm/releases/download/v1.4.10/fsm_v1.4.10_darwin_arm64.tar.gz"
-      sha256 "97fbf2953d5d4d8dd69210f19b5ea20e1f0b3630938feabe71672b5f08d4fbd7"
+      sha256 "3631cc35de2944ad6ca3f663b8935eb8f6637bcb38ad8fb98a962934fdb53708"
 
       def install
         bin.install "fsm"
@@ -34,7 +34,7 @@ class Fsm < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/flomesh-io/fsm/releases/download/v1.4.10/fsm_v1.4.10_linux_x86_64.tar.gz"
-        sha256 "306869707d686baedc18bde5a7842c2d7f5c50b670e7310bc383799035840e6b"
+        sha256 "f520ddf534dad23568e731c51100453475afd60ff96c1d736163358e843901ca"
 
         def install
           bin.install "fsm"
@@ -44,7 +44,7 @@ class Fsm < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/flomesh-io/fsm/releases/download/v1.4.10/fsm_v1.4.10_linux_arm64.tar.gz"
-        sha256 "b4b72b51b4f0b95eac840b3162bd8f5f6d77e59d18589fca848069c7910a44b6"
+        sha256 "7c775f58230766dfad421be40271744534938d05fe03784b645139b51e24f681"
 
         def install
           bin.install "fsm"

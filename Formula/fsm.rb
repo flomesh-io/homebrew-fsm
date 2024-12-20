@@ -5,24 +5,24 @@
 class Fsm < Formula
   desc "Lightweight service mesh for Kubernetes East-West and North-South traffic management"
   homepage "https://flomesh.io/fsm"
-  version "1.4.14"
+  version "1.5.0-alpha.1"
   license "Apache 2.0"
 
   depends_on "git" => :optional
   depends_on "go" => :optional
 
   on_macos do
-    on_intel do
-      url "https://github.com/flomesh-io/fsm/releases/download/v1.4.14/fsm_v1.4.14_darwin_x86_64.tar.gz"
-      sha256 "aae21e71d56251e566688d4120124c3218f4f3e97b1c0b62606b9692f84bc645"
+    if Hardware::CPU.intel?
+      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.1/fsm_v1.5.0-alpha.1_darwin_x86_64.tar.gz"
+      sha256 "e47a1445e1e133068755c673e67b81129400fd971f6bf8dd403089d4c0797c1d"
 
       def install
         bin.install "fsm"
       end
     end
-    on_arm do
-      url "https://github.com/flomesh-io/fsm/releases/download/v1.4.14/fsm_v1.4.14_darwin_arm64.tar.gz"
-      sha256 "90c0d981f73e89dcc17c6e3231bd6ac10984161b5a49f516e9f63a75d103b8f7"
+    if Hardware::CPU.arm?
+      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.1/fsm_v1.5.0-alpha.1_darwin_arm64.tar.gz"
+      sha256 "08495f76f46d8eb242806c709ca55258d3eda398d682f1a7e7948f58f79d234c"
 
       def install
         bin.install "fsm"
@@ -31,20 +31,20 @@ class Fsm < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flomesh-io/fsm/releases/download/v1.4.14/fsm_v1.4.14_linux_x86_64.tar.gz"
-        sha256 "e0343a366030019c93e5cf8a9ff030ae568d55101a81f4a3d016df0f692aef46"
+        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.1/fsm_v1.5.0-alpha.1_linux_x86_64.tar.gz"
+        sha256 "90657aa66012620c13262ad20a26f1234c6477959b84d4e0b15f321fa10ef079"
 
         def install
           bin.install "fsm"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flomesh-io/fsm/releases/download/v1.4.14/fsm_v1.4.14_linux_arm64.tar.gz"
-        sha256 "e732057c07e74a5ece36ae217571bb1fa10e98d1319c4d771bcbf6ee7700dc2f"
+        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.1/fsm_v1.5.0-alpha.1_linux_arm64.tar.gz"
+        sha256 "1aaffaf68ccdbe657ee0f810696c3aab96484fd541bb635b4236e69958f247ae"
 
         def install
           bin.install "fsm"

@@ -14,7 +14,7 @@ class Fsm < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.4/fsm_v1.5.0-alpha.4_darwin_x86_64.tar.gz"
-      sha256 "012fae6b7fc803e16c8dd53c3f23e859ba56e0406b74621e9ae47265fb1276c8"
+      sha256 "c135c76199413a72ebe0ec1f59bc4f8db78a19d636950f86932286dd254a6c16"
 
       def install
         bin.install "fsm"
@@ -22,7 +22,7 @@ class Fsm < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.4/fsm_v1.5.0-alpha.4_darwin_arm64.tar.gz"
-      sha256 "e04acd696d11f1d10e1230d1920cc6ca36a7a529264767741155dad8260bcbe7"
+      sha256 "3f1e5bab4bf8ae02f61ed7fc4ac76d7df8c37f8e3659f892d09b45b257776dbf"
 
       def install
         bin.install "fsm"
@@ -34,7 +34,7 @@ class Fsm < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.4/fsm_v1.5.0-alpha.4_linux_x86_64.tar.gz"
-        sha256 "e16eea14bd50abc29edb39baf0eefe810946033d250246c5a641810940bc7891"
+        sha256 "a51f098f26e6be982958966416b9387dea7a8ad22c1ccaab0369810e918f72e5"
 
         def install
           bin.install "fsm"
@@ -44,7 +44,7 @@ class Fsm < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.4/fsm_v1.5.0-alpha.4_linux_arm64.tar.gz"
-        sha256 "20dc356dc5ffd62109d399693505f601d07d4570592aa93f5fadff29a383156b"
+        sha256 "d8b4fcd5c440b26de0049422f75a7c95122cb1f0640475c7294d393f9f1a910c"
 
         def install
           bin.install "fsm"

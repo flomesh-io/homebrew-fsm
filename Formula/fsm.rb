@@ -5,7 +5,7 @@
 class Fsm < Formula
   desc "Lightweight service mesh for Kubernetes East-West and North-South traffic management"
   homepage "https://flomesh.io/fsm"
-  version "1.5.0-alpha.6"
+  version "1.5.0-alpha.7"
   license "Apache 2.0"
 
   depends_on "git" => :optional
@@ -13,16 +13,16 @@ class Fsm < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.6/fsm_v1.5.0-alpha.6_darwin_x86_64.tar.gz"
-      sha256 "ba719da3d4eb2b7b6ba1ae495353edaae5aad7697dd53c7ff0caefc97dc1849e"
+      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.7/fsm_v1.5.0-alpha.7_darwin_x86_64.tar.gz"
+      sha256 "8471ea0e78273ff90ae600e98673b5d6f97421cfe1996a135fa2ed6a62cc943d"
 
       def install
         bin.install "fsm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.6/fsm_v1.5.0-alpha.6_darwin_arm64.tar.gz"
-      sha256 "4381a17605e35e45b4faa59af7510205c6d9c3e4ed125976829fdfb149322585"
+      url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.7/fsm_v1.5.0-alpha.7_darwin_arm64.tar.gz"
+      sha256 "879d5e090f9bd72ec36b895125388692db0f876544220e261d58fe72e3a4225d"
 
       def install
         bin.install "fsm"
@@ -33,8 +33,8 @@ class Fsm < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.6/fsm_v1.5.0-alpha.6_linux_x86_64.tar.gz"
-        sha256 "1c8757297c65b427c4cb9b0729e16c1bfc563626e195e2e37c5f119edf753002"
+        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.7/fsm_v1.5.0-alpha.7_linux_x86_64.tar.gz"
+        sha256 "d27238fdc83148a5eb24d7953c0d2fa8f200756dd0dbef9a195980cb8f49ef14"
 
         def install
           bin.install "fsm"
@@ -43,8 +43,8 @@ class Fsm < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.6/fsm_v1.5.0-alpha.6_linux_arm64.tar.gz"
-        sha256 "11a7deee2f9ad39847125a681a3a3a3a401215c63f546217d357cb767177a18d"
+        url "https://github.com/flomesh-io/fsm/releases/download/v1.5.0-alpha.7/fsm_v1.5.0-alpha.7_linux_arm64.tar.gz"
+        sha256 "5314f07000b2a44c9c6435a73575ad4eb0d4a2e229f0f52a68db65bd219f391d"
 
         def install
           bin.install "fsm"
